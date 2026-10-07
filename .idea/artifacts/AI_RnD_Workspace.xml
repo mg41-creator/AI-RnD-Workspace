@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="AI-RnD-Workspace">
+    <output-path>$PROJECT_DIR$/out/artifacts/AI_RnD_Workspace</output-path>
+    <root id="archive" name="AI-RnD-Workspace.war" />
+  </artifact>
+</component>
