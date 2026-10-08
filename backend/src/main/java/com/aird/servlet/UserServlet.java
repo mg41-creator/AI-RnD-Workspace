@@ -24,14 +24,20 @@ public class UserServlet extends HttpServlet {
         user.setPassword(password);
         user.setEmail(email);
         try {
-            userDAO.addUser(user);
+            User existingUser = userDAO.findUserByEmail(email);
+
             response.setContentType("text/plain");
-            response.getWriter().println("Server added succesfully");
+
+            if (existingUser != null) {
+                response.getWriter().println("Email already registered!");
+            } else {
+                userDAO.addUser(user);
+                response.getWriter().println("Registration successful!");
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
-            response.getWriter().println("Data Base Error");
+            response.getWriter().println("Database error!");
         }
-        //response.setContentType("text/plain");
-        //response.getWriter().println("Server added succesfully");
     }
 }
