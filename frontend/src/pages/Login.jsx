@@ -19,7 +19,7 @@ function Login({ onLogin, onSignup }) {
       formData.append("password", password);
 
       const response = await fetch(
-        "http://localhost:8080/AI-RnD-Workspace/login",
+        "https://ai-rnd-workspace.onrender.com/login",
         {
           method: "POST",
           headers: {

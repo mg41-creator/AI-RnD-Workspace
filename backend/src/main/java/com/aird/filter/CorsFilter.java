@@ -22,7 +22,7 @@ public class CorsFilter implements Filter {
 
         HttpServletResponse httpResponse = (HttpServletResponse) response;
 
-        httpResponse.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
+        httpResponse.setHeader("Access-Control-Allow-Origin", "https://ai-rnd-workspace.vercel.app");
         httpResponse.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
         httpResponse.setHeader("Access-Control-Allow-Headers", "Content-Type");
         httpResponse.setHeader("Access-Control-Allow-Credentials", "true");

@@ -27,7 +27,7 @@ function Signup({ onSignup, onBackToLogin }) {
       formData.delete("confirmPassword");
 
       const response = await fetch(
-        "http://localhost:8080/AI-RnD-Workspace/register",
+          "https://ai-rnd-workspace.onrender.com/register",
         {
           method: "POST",
           headers: {
