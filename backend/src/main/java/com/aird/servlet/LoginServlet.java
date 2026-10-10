@@ -37,6 +37,7 @@ public class LoginServlet extends HttpServlet {
                 session.setAttribute("userRole", user.getRole());
 
                 response.getWriter().println("Login successful!");
+                response.getWriter().println("User ID: " + user.getId());
                 response.getWriter().println("Welcome " + user.getName());
                 response.getWriter().println("Role: " + user.getRole());
 
